@@ -7,7 +7,7 @@ const cards = [
   { icon: '△', en: 'Traffic Signs', ar: 'إشارات المرور', route: '/signs' as const },
   { icon: '%', en: 'My Progress', ar: 'مستوى التقدم', route: '/progress' as const },
   { icon: '★', en: 'Bookmarks', ar: 'الأسئلة المحفوظة', route: '/bookmarks' as const },
-  { icon: '⚙', en: 'Settings', ar: 'الإعدادات', route: '/settings' as const },
+  { icon: '⚙', en: 'Settings', ar: 'الإعدادات', route: '/settings' as const }
 ];
 
 export default function HomeScreen() {
@@ -62,5 +62,5 @@ const styles = StyleSheet.create({
   body: { flex: 1, marginHorizontal: 14 },
   cardTitle: { color: '#17324D', fontSize: 17, fontWeight: '900' },
   cardAr: { color: '#17324D', fontSize: 17, fontWeight: '800', textAlign: 'right', writingDirection: 'rtl', marginTop: 3 },
-  arrow: { color: '#123B64', fontSize: 32 },
+  arrow: { color: '#123B64', fontSize: 32 }
 });

@@ -60,5 +60,5 @@ const styles = StyleSheet.create({
   rtl: { writingDirection: 'rtl', marginTop: 3 },
   reset: { marginTop: 28, backgroundColor: '#B42318', borderRadius: 15, paddingVertical: 13, paddingHorizontal: 28, alignItems: 'center' },
   resetText: { color: '#FFFFFF', fontWeight: '800' },
-  resetAr: { color: '#FFFFFF', fontWeight: '700', writingDirection: 'rtl', marginTop: 3 },
+  resetAr: { color: '#FFFFFF', fontWeight: '700', writingDirection: 'rtl', marginTop: 3 }
 });

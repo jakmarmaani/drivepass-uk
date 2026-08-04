@@ -15,13 +15,8 @@ export default function RootLayout() {
       .catch((reason) => setError(reason instanceof Error ? reason.message : 'Database error'));
   }, []);
 
-  if (error) {
-    return <View style={styles.center}><Text style={styles.error}>Database error</Text><Text>{error}</Text></View>;
-  }
-
-  if (!ready) {
-    return <View style={styles.center}><ActivityIndicator size="large" color="#123B64" /><Text style={styles.loading}>Preparing DrivePass UK...</Text></View>;
-  }
+  if (error) return <View style={styles.center}><Text style={styles.error}>Database error</Text><Text>{error}</Text></View>;
+  if (!ready) return <View style={styles.center}><ActivityIndicator size="large" color="#123B64" /><Text style={styles.loading}>Preparing DrivePass UK...</Text></View>;
 
   return (
     <>
@@ -31,7 +26,7 @@ export default function RootLayout() {
           headerStyle: { backgroundColor: '#123B64' },
           headerTintColor: '#FFFFFF',
           headerTitleStyle: { fontWeight: '700' },
-          contentStyle: { backgroundColor: '#F4F7FA' },
+          contentStyle: { backgroundColor: '#F4F7FA' }
         }}
       >
         <Stack.Screen name="index" options={{ headerShown: false }} />
@@ -51,5 +46,5 @@ export default function RootLayout() {
 const styles = StyleSheet.create({
   center: { flex: 1, alignItems: 'center', justifyContent: 'center', padding: 24, backgroundColor: '#F4F7FA' },
   loading: { marginTop: 14, color: '#17324D', fontWeight: '700' },
-  error: { color: '#B42318', fontSize: 24, fontWeight: '900', marginBottom: 12 },
+  error: { color: '#B42318', fontSize: 24, fontWeight: '900', marginBottom: 12 }
 });

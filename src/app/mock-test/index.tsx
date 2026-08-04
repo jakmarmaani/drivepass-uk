@@ -16,10 +16,7 @@ export default function MockTestScreen() {
     getAllQuestions().then(setAllQuestions).finally(() => setLoading(false));
   }, []);
 
-  const mockQuestions = useMemo(
-    () => shuffled(allQuestions).slice(0, Math.min(50, allQuestions.length)),
-    [allQuestions]
-  );
+  const mockQuestions = useMemo(() => shuffled(allQuestions).slice(0, Math.min(50, allQuestions.length)), [allQuestions]);
 
   return (
     <QuizScreen

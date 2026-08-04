@@ -1,19 +1,7 @@
 import { useEffect, useMemo, useState } from 'react';
-import {
-  ActivityIndicator,
-  Pressable,
-  SafeAreaView,
-  ScrollView,
-  StyleSheet,
-  Text,
-  View,
-} from 'react-native';
+import { ActivityIndicator, Pressable, SafeAreaView, ScrollView, StyleSheet, Text, View } from 'react-native';
 
-import {
-  isQuestionBookmarked,
-  saveAnswer,
-  toggleBookmark,
-} from '@/database/database';
+import { isQuestionBookmarked, saveAnswer, toggleBookmark } from '@/database/database';
 import type { TheoryQuestion } from '@/types/question';
 
 type Props = {
@@ -38,22 +26,11 @@ export function QuizScreen({ titleEn, titleAr, questions, loading = false }: Pro
   }, [question]);
 
   if (loading) {
-    return (
-      <View style={styles.center}>
-        <ActivityIndicator size="large" color="#123B64" />
-        <Text style={styles.loading}>Loading questions...</Text>
-        <Text style={styles.arabicCentre}>جارٍ تحميل الأسئلة...</Text>
-      </View>
-    );
+    return <View style={styles.center}><ActivityIndicator size="large" color="#123B64" /></View>;
   }
 
   if (!question || questions.length === 0) {
-    return (
-      <View style={styles.center}>
-        <Text style={styles.title}>No questions available</Text>
-        <Text style={styles.arabicCentre}>لا توجد أسئلة متاحة</Text>
-      </View>
-    );
+    return <View style={styles.center}><Text style={styles.title}>No questions available</Text><Text style={styles.arabicCentre}>لا توجد أسئلة متاحة</Text></View>;
   }
 
   async function choose(optionIndex: number) {
@@ -81,8 +58,7 @@ export function QuizScreen({ titleEn, titleAr, questions, loading = false }: Pro
   }
 
   async function bookmark() {
-    const state = await toggleBookmark(question.id);
-    setBookmarked(state);
+    setBookmarked(await toggleBookmark(question.id));
   }
 
   if (finished) {
@@ -126,9 +102,7 @@ export function QuizScreen({ titleEn, titleAr, questions, loading = false }: Pro
               <Text style={styles.badgeText}>{question.categoryEn}</Text>
               <Text style={styles.badgeArabic}>{question.categoryAr}</Text>
             </View>
-            <Pressable onPress={bookmark} style={styles.bookmarkButton}>
-              <Text style={styles.bookmarkText}>{bookmarked ? '★' : '☆'}</Text>
-            </Pressable>
+            <Pressable onPress={bookmark}><Text style={styles.bookmarkText}>{bookmarked ? '★' : '☆'}</Text></Pressable>
           </View>
 
           <Text style={styles.questionEn}>{question.questionEn}</Text>
@@ -145,11 +119,7 @@ export function QuizScreen({ titleEn, titleAr, questions, loading = false }: Pro
               key={optionIndex}
               disabled={selected !== null}
               onPress={() => choose(optionIndex)}
-              style={[
-                styles.option,
-                correct && styles.correct,
-                wrong && styles.wrong,
-              ]}
+              style={[styles.option, correct && styles.correct, wrong && styles.wrong]}
             >
               <Text style={styles.optionLetter}>{String.fromCharCode(65 + optionIndex)}</Text>
               <View style={styles.optionBody}>
@@ -162,27 +132,16 @@ export function QuizScreen({ titleEn, titleAr, questions, loading = false }: Pro
 
         {selected !== null && (
           <>
-            <View style={[
-              styles.feedback,
-              selected === question.correctOption ? styles.feedbackCorrect : styles.feedbackWrong,
-            ]}>
-              <Text style={styles.feedbackTitle}>
-                {selected === question.correctOption ? 'Correct' : 'Incorrect'}
-              </Text>
-              <Text style={styles.feedbackArabic}>
-                {selected === question.correctOption ? 'إجابة صحيحة' : 'إجابة غير صحيحة'}
-              </Text>
+            <View style={[styles.feedback, selected === question.correctOption ? styles.feedbackCorrect : styles.feedbackWrong]}>
+              <Text style={styles.feedbackTitle}>{selected === question.correctOption ? 'Correct' : 'Incorrect'}</Text>
+              <Text style={styles.feedbackArabic}>{selected === question.correctOption ? 'إجابة صحيحة' : 'إجابة غير صحيحة'}</Text>
               <Text style={styles.explanation}>{question.explanationEn}</Text>
               <Text style={styles.explanationAr}>{question.explanationAr}</Text>
             </View>
 
             <Pressable style={styles.primaryButton} onPress={next}>
-              <Text style={styles.primaryText}>
-                {index === questions.length - 1 ? 'View results' : 'Next question'}
-              </Text>
-              <Text style={styles.primaryArabic}>
-                {index === questions.length - 1 ? 'عرض النتيجة' : 'السؤال التالي'}
-              </Text>
+              <Text style={styles.primaryText}>{index === questions.length - 1 ? 'View results' : 'Next question'}</Text>
+              <Text style={styles.primaryArabic}>{index === questions.length - 1 ? 'عرض النتيجة' : 'السؤال التالي'}</Text>
             </Pressable>
           </>
         )}
@@ -195,8 +154,6 @@ const styles = StyleSheet.create({
   safe: { flex: 1, backgroundColor: '#F4F7FA' },
   container: { padding: 18, paddingBottom: 40 },
   center: { flex: 1, alignItems: 'center', justifyContent: 'center', padding: 24, backgroundColor: '#F4F7FA' },
-  loading: { marginTop: 14, color: '#17324D', fontWeight: '700' },
-  arabicCentre: { marginTop: 6, color: '#17324D', fontSize: 17, writingDirection: 'rtl' },
   screenTitle: { fontSize: 23, fontWeight: '900', color: '#17324D' },
   screenTitleArabic: { fontSize: 21, fontWeight: '800', color: '#17324D', textAlign: 'right', writingDirection: 'rtl' },
   progressRow: { flexDirection: 'row', justifyContent: 'space-between', marginTop: 16, marginBottom: 8 },
@@ -208,7 +165,6 @@ const styles = StyleSheet.create({
   badge: { backgroundColor: '#E3F0FA', paddingHorizontal: 12, paddingVertical: 8, borderRadius: 12 },
   badgeText: { color: '#123B64', fontWeight: '800' },
   badgeArabic: { color: '#123B64', fontWeight: '700', writingDirection: 'rtl', marginTop: 2 },
-  bookmarkButton: { padding: 8 },
   bookmarkText: { fontSize: 30, color: '#F4B400' },
   questionEn: { marginTop: 16, fontSize: 20, lineHeight: 29, fontWeight: '800', color: '#17324D' },
   divider: { height: 1, backgroundColor: '#E5EBF0', marginVertical: 15 },
@@ -236,4 +192,5 @@ const styles = StyleSheet.create({
   score: { fontSize: 38, fontWeight: '900', color: '#123B64' },
   percentage: { fontSize: 20, fontWeight: '800', color: '#526779', marginTop: 3 },
   title: { fontSize: 24, fontWeight: '900', color: '#17324D' },
+  arabicCentre: { marginTop: 6, color: '#17324D', fontSize: 17, writingDirection: 'rtl' }
 });

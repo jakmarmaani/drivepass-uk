@@ -14,9 +14,7 @@ export default function PracticeHome() {
     getAllQuestions().then(setQuestions).finally(() => setLoading(false));
   }, []);
 
-  if (loading) {
-    return <View style={styles.center}><ActivityIndicator size="large" color="#123B64" /></View>;
-  }
+  if (loading) return <View style={styles.center}><ActivityIndicator size="large" color="#123B64" /></View>;
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
@@ -66,5 +64,5 @@ const styles = StyleSheet.create({
   cardTitle: { color: '#17324D', fontSize: 16, fontWeight: '800' },
   cardAr: { color: '#17324D', fontSize: 16, fontWeight: '700', textAlign: 'right', writingDirection: 'rtl', marginTop: 2 },
   count: { color: '#607386', marginTop: 6 },
-  arrow: { color: '#123B64', fontSize: 30 },
+  arrow: { color: '#123B64', fontSize: 30 }
 });

@@ -16,3 +16,17 @@ export type TheoryQuestion = {
   explanationAr: string;
   image?: string;
 };
+
+export type AnswerRecord = {
+  questionId: number;
+  selectedOption: number;
+  isCorrect: boolean;
+  answeredAt: string;
+};
+
+export type ProgressSummary = {
+  answered: number;
+  correct: number;
+  incorrect: number;
+  percentage: number;
+};

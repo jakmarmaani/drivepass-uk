@@ -10,9 +10,7 @@ export default function SignsScreen() {
     const value = query.trim().toLowerCase();
     if (!value) return trafficSigns;
     return trafficSigns.filter((sign) =>
-      `${sign.nameEn} ${sign.nameAr} ${sign.meaningEn} ${sign.meaningAr}`
-        .toLowerCase()
-        .includes(value)
+      `${sign.nameEn} ${sign.nameAr} ${sign.meaningEn} ${sign.meaningAr}`.toLowerCase().includes(value)
     );
   }, [query]);
 
@@ -21,12 +19,7 @@ export default function SignsScreen() {
       <Text style={styles.title}>UK Traffic Signs</Text>
       <Text style={styles.titleAr}>إشارات المرور البريطانية</Text>
 
-      <TextInput
-        value={query}
-        onChangeText={setQuery}
-        placeholder="Search signs | ابحث عن إشارة"
-        style={styles.search}
-      />
+      <TextInput value={query} onChangeText={setQuery} placeholder="Search signs | ابحث عن إشارة" style={styles.search} />
 
       {filtered.map((sign) => (
         <View key={sign.id} style={styles.card}>
@@ -58,5 +51,5 @@ const styles = StyleSheet.create({
   name: { color: '#17324D', fontSize: 18, fontWeight: '900', marginTop: 8 },
   nameAr: { color: '#17324D', fontSize: 18, fontWeight: '800', textAlign: 'right', writingDirection: 'rtl', marginTop: 3 },
   meaning: { color: '#40576B', marginTop: 10, lineHeight: 21 },
-  meaningAr: { color: '#40576B', fontSize: 16, lineHeight: 25, textAlign: 'right', writingDirection: 'rtl', marginTop: 5 },
+  meaningAr: { color: '#40576B', fontSize: 16, lineHeight: 25, textAlign: 'right', writingDirection: 'rtl', marginTop: 5 }
 });
