@@ -1,27 +1,21 @@
-import { useEffect, useState } from 'react';
 import { useLocalSearchParams } from 'expo-router';
 
-import { QuizScreen } from '@/components/QuizScreen';
-import { getQuestionsByCategory } from '@/database/database';
-import type { TheoryQuestion } from '@/types/question';
+import { CompleteQuiz } from '@/components/CompleteQuiz';
+import { releaseQuestions } from '@/data/releaseQuestions';
 
 export default function CategoryPracticeScreen() {
-  const params = useLocalSearchParams<{ category: string }>();
-  const [questions, setQuestions] = useState<TheoryQuestion[]>([]);
-  const [loading, setLoading] = useState(true);
+  const { category } = useLocalSearchParams<{
+    category: string;
+  }>();
 
-  useEffect(() => {
-    getQuestionsByCategory(params.category).then(setQuestions).finally(() => setLoading(false));
-  }, [params.category]);
-
-  const first = questions[0];
+  const questions = releaseQuestions.filter(
+    (question) => question.category === category
+  );
 
   return (
-    <QuizScreen
-      titleEn={first?.categoryEn ?? 'Practice'}
-      titleAr={first?.categoryAr ?? 'التدريب'}
+    <CompleteQuiz
+      mode="practice"
       questions={questions}
-      loading={loading}
     />
   );
 }

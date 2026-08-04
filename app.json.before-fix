@@ -1,0 +1,62 @@
+{
+  "expo": {
+    "name": "DrivePass UK",
+    "slug": "drivepass-uk",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "scheme": "drivepassuk",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "icon": "./assets/images/icon.png",
+    "splash": {
+      "image": "./assets/images/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#123B64"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "uk.co.drivepass.theory",
+      "buildNumber": "1",
+      "infoPlist": {
+        "CFBundleDisplayName": "DrivePass UK",
+        "CFBundleDevelopmentRegion": "en",
+        "CFBundleLocalizations": [
+          "en",
+          "ar",
+          "en",
+          "ar"
+        ],
+        "ITSAppUsesNonExemptEncryption": false
+      }
+    },
+    "android": {
+      "package": "uk.co.drivepass.theory",
+      "versionCode": 1,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#123B64"
+      },
+      "edgeToEdgeEnabled": true
+    },
+    "web": {
+      "bundler": "metro",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-localization",
+      "expo-sqlite"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "appNameArabic": "درايف باس المملكة المتحدة",
+      "disclaimer": "Independent revision application. Not affiliated with or endorsed by DVSA.",
+      "eas": {
+        "projectId": "1b765ab1-aafe-45de-b486-89f6b72aefb0"
+      },
+      "router": {}
+    }
+  }
+}

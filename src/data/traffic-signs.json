@@ -1,0 +1,130 @@
+[
+  {
+    "id": 1,
+    "category": {
+      "en": "Prohibition signs",
+      "ar": "علامات المنع"
+    },
+    "name": {
+      "en": "No entry",
+      "ar": "ممنوع الدخول"
+    },
+    "meaning": {
+      "en": "Vehicles must not enter this road.",
+      "ar": "يُمنع على المركبات دخول هذا الطريق."
+    },
+    "symbolFallback": "⛔"
+  },
+  {
+    "id": 2,
+    "category": {
+      "en": "Mandatory signs",
+      "ar": "العلامات الإلزامية"
+    },
+    "name": {
+      "en": "Stop",
+      "ar": "قف"
+    },
+    "meaning": {
+      "en": "Stop at the line and proceed only when it is safe.",
+      "ar": "توقف عند الخط ثم تحرك فقط عندما يكون ذلك آمناً."
+    },
+    "symbolFallback": "🛑"
+  },
+  {
+    "id": 3,
+    "category": {
+      "en": "Warning signs",
+      "ar": "علامات التحذير"
+    },
+    "name": {
+      "en": "General warning",
+      "ar": "تحذير عام"
+    },
+    "meaning": {
+      "en": "Be prepared for a hazard ahead.",
+      "ar": "كن مستعداً لوجود خطر أمامك."
+    },
+    "symbolFallback": "⚠️"
+  },
+  {
+    "id": 4,
+    "category": {
+      "en": "Speed-limit signs",
+      "ar": "علامات حدود السرعة"
+    },
+    "name": {
+      "en": "Maximum speed 30 mph",
+      "ar": "السرعة القصوى 30 ميلاً في الساعة"
+    },
+    "meaning": {
+      "en": "You must not exceed 30 mph.",
+      "ar": "يجب ألا تتجاوز سرعة 30 ميلاً في الساعة."
+    },
+    "symbolFallback": "30"
+  },
+  {
+    "id": 5,
+    "category": {
+      "en": "Prohibition signs",
+      "ar": "علامات المنع"
+    },
+    "name": {
+      "en": "No overtaking",
+      "ar": "ممنوع التجاوز"
+    },
+    "meaning": {
+      "en": "You must not overtake other motor vehicles.",
+      "ar": "يُمنع تجاوز المركبات الآلية الأخرى."
+    },
+    "symbolFallback": "🚫"
+  },
+  {
+    "id": 6,
+    "category": {
+      "en": "Warning signs",
+      "ar": "علامات التحذير"
+    },
+    "name": {
+      "en": "Pedestrian crossing ahead",
+      "ar": "معبر مشاة أمامك"
+    },
+    "meaning": {
+      "en": "Reduce speed and be prepared for pedestrians crossing.",
+      "ar": "خفف السرعة وكن مستعداً لعبور المشاة."
+    },
+    "symbolFallback": "🚸"
+  },
+  {
+    "id": 7,
+    "category": {
+      "en": "Warning signs",
+      "ar": "علامات التحذير"
+    },
+    "name": {
+      "en": "Road works",
+      "ar": "أعمال على الطريق"
+    },
+    "meaning": {
+      "en": "Road works or temporary traffic control are ahead.",
+      "ar": "توجد أعمال طريق أو تنظيم مؤقت لحركة المرور أمامك."
+    },
+    "symbolFallback": "🚧"
+  },
+  {
+    "id": 8,
+    "category": {
+      "en": "Information signs",
+      "ar": "علامات المعلومات"
+    },
+    "name": {
+      "en": "Parking place",
+      "ar": "مكان لوقوف السيارات"
+    },
+    "meaning": {
+      "en": "A designated parking area is available.",
+      "ar": "توجد منطقة مخصصة لوقوف السيارات."
+    },
+    "symbolFallback": "🅿️"
+  }
+]

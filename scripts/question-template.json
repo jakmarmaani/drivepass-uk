@@ -1,0 +1,39 @@
+[
+  {
+    "id": 1001,
+    "category": "road-signs",
+    "categoryName": {
+      "en": "Road and traffic signs",
+      "ar": "إشارات الطريق والمرور"
+    },
+    "question": {
+      "en": "Write an original practice question here.",
+      "ar": "اكتب سؤالاً تدريبياً أصلياً هنا."
+    },
+    "options": [
+      {
+        "en": "Option A",
+        "ar": "الخيار أ"
+      },
+      {
+        "en": "Option B",
+        "ar": "الخيار ب"
+      },
+      {
+        "en": "Option C",
+        "ar": "الخيار ج"
+      },
+      {
+        "en": "Option D",
+        "ar": "الخيار د"
+      }
+    ],
+    "correctOption": 0,
+    "explanation": {
+      "en": "Explain the answer.",
+      "ar": "اشرح الإجابة."
+    },
+    "highwayCodeReference": "Rule number",
+    "difficulty": "easy"
+  }
+]

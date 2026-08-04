@@ -9,7 +9,9 @@
       "@/assets/*": [
         "./assets/*"
       ]
-    }
+    },
+    "resolveJsonModule": true,
+    "esModuleInterop": true
   },
   "include": [
     "**/*.ts",

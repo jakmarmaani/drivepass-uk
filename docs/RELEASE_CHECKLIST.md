@@ -1,0 +1,21 @@
+# Release checklist
+
+- [ ] Replace all starter questions with reviewed original content.
+- [ ] Confirm every English and Arabic answer.
+- [ ] Confirm every Highway Code reference against the current edition.
+- [ ] Replace traffic-sign emoji placeholders with legally reusable image assets.
+- [ ] Test Arabic layout on Android and iOS physical devices.
+- [ ] Test speech on Android and iOS.
+- [ ] Test the full 50-question, 57-minute mock test.
+- [ ] Confirm the pass result uses 43/50 when the bank contains at least 50 questions.
+- [ ] Add a public privacy-policy URL.
+- [ ] Add a support email and support URL.
+- [ ] Prepare app icon, adaptive icon, splash image and screenshots.
+- [ ] Run `npx tsc --noEmit`.
+- [ ] Run `npx expo-doctor`.
+- [ ] Build Android preview APK.
+- [ ] Build Android production AAB.
+- [ ] Build iOS production IPA.
+- [ ] Complete Google Play Data Safety.
+- [ ] Complete Apple App Privacy.
+- [ ] Conduct store testing and review.
