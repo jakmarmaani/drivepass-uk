@@ -41,3 +41,14 @@ example
 # generated native folders
 /ios
 /android
+# Temporary question generation files
+question-bank-validation-report.json
+question-duplicate-report.json
+repeated-topic-report.json
+
+src/data/question-batches/
+src/data/questions.backup-before-dedup.json
+src/data/questions.before-2026-rebuild.json
+src/data/questions.original-before-new-bank.json
+src/data/questions.rebuilt.json
+src/data/questions.unique.json
