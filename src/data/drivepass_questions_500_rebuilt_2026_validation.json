@@ -1,0 +1,25 @@
+{
+  "totalQuestions": 500,
+  "sourceCoreLearningPoints": 70,
+  "newCPRAndAEDQuestions": 10,
+  "exactEnglishDuplicates": 0,
+  "exactArabicDuplicates": 0,
+  "schemaErrors": [],
+  "categories": {
+    "alertness": 35,
+    "attitude": 35,
+    "safety-vehicle": 35,
+    "safety-margins": 35,
+    "hazard-awareness": 35,
+    "vulnerable-road-users": 35,
+    "other-vehicles": 35,
+    "vehicle-handling": 35,
+    "motorway-rules": 35,
+    "rules-road": 35,
+    "road-signs": 35,
+    "documents": 35,
+    "incidents": 45,
+    "vehicle-loading": 35
+  },
+  "importantNote": "This is an original DVSA-style practice bank, not the copyrighted official DVSA question bank. The 490 non-first-aid items expand 70 core learning points into distinct scenario questions."
+}
